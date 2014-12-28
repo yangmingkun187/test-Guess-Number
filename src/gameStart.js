@@ -17,7 +17,7 @@ function gameStart() {
 
   rl.on('line', function(inputs) {
     times -= 1;
-    var judge = new Judge(_.toArray(inputs), ['1','2','3','4']);
+    var judge = new Judge(_.toArray(inputs), mathRands);
     var result = judge.judgeResult();
 
     var printer = new Printer(result, times);
