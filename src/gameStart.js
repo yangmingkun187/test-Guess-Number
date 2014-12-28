@@ -8,7 +8,6 @@ function gameStart() {
   var mathRands = Input.getMathRands();
   var headText = Printer.printHead();
   console.log(headText);
-  var ChallengingTimes = 0;
 
   var rl = readline.createInterface({
     input: process.stdin,
