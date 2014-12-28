@@ -12,4 +12,15 @@ describe('Input', function() {
       expect(mathRand.length === 4).toBeTruthy();
     });
   });
+
+  describe('.getInputs', function() {
+    it('should return correct 4 number of inputs', function() {
+      var Input = require('../src/model/input');
+      var _ = require('lodash');
+
+      var mathRand = Input.getInputs();
+
+      expect(mathRand.length === 4).toBeTruthy();
+    });
+  });
 });

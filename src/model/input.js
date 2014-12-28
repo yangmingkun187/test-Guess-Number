@@ -14,8 +14,11 @@ Input.getMathRands = function() {
       mathRands.push(number);
     }
   }
-
   return mathRands;
+};
+
+Input.getInputs = function() {
+
 };
 
 module.exports = Input;
