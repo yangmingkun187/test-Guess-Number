@@ -7,6 +7,7 @@ var _ = require('lodash');
 function gameStart() {
   var mathRands = Input.getMathRands();
   var headText = Printer.printHead();
+  var times = 6;
   console.log(headText);
 
   var rl = readline.createInterface({
@@ -15,16 +16,17 @@ function gameStart() {
   });
 
   rl.on('line', function(inputs) {
+    times -= 1;
     var judge = new Judge(_.toArray(inputs), ['1','2','3','4']);
     var result = judge.judgeResult();
 
-    var printer = new Printer(result, 0);
+    var printer = new Printer(result, times);
     var resultText = printer.printResult();
-    if(resultText === 'congratulations!') {
+    if(resultText === 'congratulations!' || times === 0) {
       console.log(resultText);
       rl.close();
     } else {
-      console.log(resultText + 'but you only have ' + (6 - ChallengingTimes) + ' times!');
+      console.log(resultText);
     }
   });
 }

@@ -13,9 +13,10 @@ Judge.prototype.judgeResult = function () {
   for (var i = 0; i < this.mathRands.length; i++) {
     if(this.mathRands[i] === this.inputs[i]) {
       acountA += 1;
-      continue;
-    } else if(_.contains(this.mathRands, this.inputs[i])) {
-      acountB += 1;
+    } else {
+      if(_.contains(this.mathRands, this.inputs[i])) {
+        acountB += 1;
+      }
     }
   }
 
