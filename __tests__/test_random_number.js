@@ -1,14 +1,14 @@
-describe('input', function() {
-  describe('getMathRand', function() {
+jest.dontMock('lodash');
+jest.dontMock('../src/model/input');
+
+describe('Input', function() {
+  describe('.getMathRands', function() {
     it('should return correct 4 number', function() {
-      var getMathRand = jest.genMockFn();
-      getMathRand.mockReturnValue("1234");
+      var Input = require('../src/model/input');
+      var _ = require('lodash');
 
-      var input = {
-        getMathRand : getMathRand
-      };
+      var mathRand = Input.getMathRands();
 
-      var mathRand = input.getMathRand();
       expect(mathRand.length === 4).toBeTruthy();
     });
   });
