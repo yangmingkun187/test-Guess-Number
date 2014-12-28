@@ -18,5 +18,13 @@ describe('printer', function() {
       var resultText = printer.printResult();
       expect(resultText).toBe('congratulations!');
     });
+
+    it('should return correct expect result ', function() {
+      var Printer = require('../src/model/printer');
+      var printer = new Printer('2A2B');
+
+      var resultText = printer.printResult();
+      expect(resultText).toBe('sorry! you answer is 2A2B\nyou can try again!');
+    });
   });
 });
