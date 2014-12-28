@@ -9,10 +9,12 @@ Printer.printHead = function() {
 
 Printer.prototype.printResult = function () {
   var resultText = '';
+
   if(this.result === '4A0B') {
     resultText = 'congratulations!';
   } else {
     resultText = 'sorry! you answer is ' + this.result + '\nyou can try again!';
+    this.ChallengingTimes += 1;
   }
   return resultText;
 };

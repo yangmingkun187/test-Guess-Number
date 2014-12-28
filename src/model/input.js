@@ -10,15 +10,11 @@ Input.getMathRands = function() {
 
   while (mathRands.length < 4) {
     number = _.random(0, 9);
-    if (!_.contains(mathRands, number)) {
-      mathRands.push(number);
+    if (!_.contains(mathRands, number.toString())) {
+      mathRands.push(number.toString());
     }
   }
   return mathRands;
-};
-
-Input.getInputs = function() {
-
 };
 
 module.exports = Input;
