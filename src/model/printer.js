@@ -13,15 +13,13 @@ Printer.prototype.printResult = function () {
 
   if(this.result === '4A0B') {
     resultText = 'congratulations!';
+  } else if (this.times === 0) {
+    resultText = 'you answer is ' + this.result +'\ngame over!';
   } else {
     resultText = 'sorry! you answer is ' + this.result +
           '\nyou can try again!' + 'but you only have ' +
           this.times + ' times!';
   }
-  if (this.times === 0) {
-    resultText = 'you answer is ' + this.result +'\ngame over!';
-  }
-
 
   return resultText;
 };

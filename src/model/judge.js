@@ -14,9 +14,7 @@ Judge.prototype.judgeResult = function () {
     if(this.mathRands[i] === this.inputs[i]) {
       acountA += 1;
     } else {
-      if(_.contains(this.mathRands, this.inputs[i])) {
-        acountB += 1;
-      }
+      acountB += _.contains(this.mathRands, this.inputs[i]) ? 1 : 0;
     }
   }
 
