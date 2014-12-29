@@ -9,7 +9,6 @@ function gameStart() {
   var headText = Printer.printHead();
   var times = 6;
   console.log(headText);
-  console.log(mathRands);
 
   var rl = readline.createInterface({
     input: process.stdin,
